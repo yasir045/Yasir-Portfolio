@@ -8,8 +8,14 @@
 body{
     height: 500px;
 }
+.navbar{
+     background-color: rgba(138, 127, 180, 0.5);
+}
 .component{
     background-color: #695aa6;
+}
+.hi{
+    margin-top: 200px;
 }
 .navbar-brand{
     font-family: font;
@@ -18,11 +24,12 @@ body{
 }
 .nav-link{
     font-family: font;
-    color: #695aa6;
+    color:white;
     
 }
 .nav-link:hover{
-    color: #695aa6;
+    
+    color:white;
 }
 @font-face {
     font-family: font;
@@ -76,4 +83,31 @@ body{
 }
 .margin{
     margin-top: 255px;
+}
+/* Default - Large Screens */
+@media (min-width: 992px) {
+    .navbar-nav {
+        flex-direction: row; /* Keep items horizontal */
+    }
+}
+
+/* Small Screens (when toggler is clicked) */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color:  rgba(138, 127, 180, 0.5); /* Set background color for small screen */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center items */
+    }
+
+    .nav-item {
+        margin: 0; /* Remove margin between items */
+        padding: 10px 0; /* Add padding for spacing */
+    }
+
+    .navbar-nav .btn-block {
+        width: 100%; /* Ensure buttons are full-width */
+    }
 }
